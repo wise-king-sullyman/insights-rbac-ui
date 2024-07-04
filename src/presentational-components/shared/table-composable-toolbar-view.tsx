@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { useIntl } from 'react-intl';
 import messages from '../../Messages';
 import { TableVariant, Table, Thead, Tr, Th, Tbody, Td } from '@patternfly/react-table';
-import TableToolbar from '@redhat-cloud-services/frontend-components/TableToolbar';
+import TableToolbar from '@ausuliv/frontend-components/TableToolbar';
 import SkeletonTable from '@patternfly/react-component-groups/dist/dynamic/SkeletonTable';
 import { Button, Pagination, EmptyStateActions } from '@patternfly/react-core';
 import { PlusCircleIcon } from '@patternfly/react-icons';

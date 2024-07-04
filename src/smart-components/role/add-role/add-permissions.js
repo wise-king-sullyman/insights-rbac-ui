@@ -1,11 +1,11 @@
 import React, { useCallback, useState, useEffect, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import { shallowEqual, useSelector, useDispatch } from 'react-redux';
-import { useChrome } from '@redhat-cloud-services/frontend-components/useChrome';
+import { useChrome } from '@ausuliv/frontend-components/useChrome';
 import useFieldApi from '@data-driven-forms/react-form-renderer/use-field-api';
 import useFormApi from '@data-driven-forms/react-form-renderer/use-form-api';
-import debouncePromise from '@redhat-cloud-services/frontend-components-utilities/debounce';
-import usePermissions from '@redhat-cloud-services/frontend-components-utilities/RBACHook';
+import debouncePromise from '@ausuliv/frontend-components-utilities/debounce';
+import usePermissions from '@ausuliv/frontend-components-utilities/RBACHook';
 import { TableToolbarView } from '../../../presentational-components/shared/table-toolbar-view';
 import { listPermissions, listPermissionOptions, expandSplats, resetExpandSplats } from '../../../redux/actions/permission-action';
 import { fetchResourceDefinitions } from '../../../redux/actions/cost-management-actions';

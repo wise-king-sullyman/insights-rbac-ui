@@ -10,9 +10,16 @@ import { updateRole, fetchRole } from '../../redux/actions/role-actions';
 import { fetchResource, fetchResourceDefinitions } from '../../redux/actions/cost-management-actions';
 import { fetchInventoryGroups, fetchInventoryGroupsDetails } from '../../redux/actions/inventory-actions';
 import { processResourceDefinitions } from '../../helpers/role/inventory-helper';
-import componentMapper from '@data-driven-forms/pf4-component-mapper/component-mapper';
+import componentMapper from '@ausuliv/pf4-component-mapper/component-mapper';
 import WarningModal from '@patternfly/react-component-groups/dist/dynamic/WarningModal';
-import { Spinner, Modal, ModalVariant, Bullseye } from '@patternfly/react-core';
+import {
+	Spinner,
+	Bullseye
+} from '@patternfly/react-core';
+import {
+	Modal,
+	ModalVariant
+} from '@patternfly/react-core/deprecated';
 import useAppNavigate from '../../hooks/useAppNavigate';
 import ResourceDefinitionsFormTemplate from './ResourceDefinitionsFormTemplate';
 import { isInventoryHostsPermission, isInventoryPermission } from './role-resource-definitions-table-helpers';

@@ -36,7 +36,7 @@ describe('<MUACard />', () => {
     expect(container.firstChild).toMatchSnapshot();
 
     const cardLinks = screen.getAllByLabelText('card-link');
-    expect(cardLinks[0]).toHaveClass('rbac-c-mua-bundles__cardlink pf-v5-u-background-color-disabled-color-300');
+    expect(cardLinks[0]).toHaveClass('rbac-c-mua-bundles__cardlink pf-v6-u-background-color-disabled-color-300');
   });
 
   test('Should not render when unentitled', () => {

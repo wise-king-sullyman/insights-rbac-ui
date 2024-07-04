@@ -2,7 +2,7 @@ import React, { lazy, Suspense, useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { IntlProvider } from 'react-intl';
-import { useChrome } from '@redhat-cloud-services/frontend-components/useChrome';
+import { useChrome } from '@ausuliv/frontend-components/useChrome';
 
 import registry, { RegistryContext } from '../utilities/store';
 import messages from '../locales/data.json';

@@ -6,12 +6,12 @@ import { Button, Label, Stack, StackItem, Text, TextContent, TextVariants } from
 import { TableVariant, compoundExpand } from '@patternfly/react-table';
 import { Table, TableHeader, TableBody } from '@patternfly/react-table/deprecated';
 import { CheckIcon, CloseIcon } from '@patternfly/react-icons';
-import { useChrome } from '@redhat-cloud-services/frontend-components/useChrome';
+import { useChrome } from '@ausuliv/frontend-components/useChrome';
 import SkeletonTable from '@patternfly/react-component-groups/dist/dynamic/SkeletonTable';
 import debounce from 'lodash/debounce';
-import Section from '@redhat-cloud-services/frontend-components/Section';
-import DateFormat from '@redhat-cloud-services/frontend-components/DateFormat';
-import Skeleton, { SkeletonSize } from '@redhat-cloud-services/frontend-components/Skeleton';
+import Section from '@ausuliv/frontend-components/Section';
+import DateFormat from '@ausuliv/frontend-components/DateFormat';
+import Skeleton, { SkeletonSize } from '@ausuliv/frontend-components/Skeleton';
 import useAppNavigate from '../../hooks/useAppNavigate';
 import AppLink, { mergeToBasename } from '../../presentational-components/shared/AppLink';
 import Breadcrumbs from '../../presentational-components/shared/breadcrumbs';
@@ -144,7 +144,7 @@ const User = () => {
                                     {intl.formatMessage(messages.addRoleToThisGroup)}
                                   </AppLink>
                                 ),
-                              props: { className: 'pf-v5-u-text-align-right' },
+                              props: { className: 'pf-v6-u-text-align-right' },
                             },
                           ],
                         }))}
@@ -153,7 +153,7 @@ const User = () => {
                         <TableBody />
                       </Table>
                     ) : (
-                      <Text className="pf-v5-u-mx-lg pf-v5-u-my-sm">
+                      <Text className="pf-v6-u-mx-lg pf-v6-u-my-sm">
                         {loadingRolesTemp ? intl.formatMessage(messages.loading) : intl.formatMessage(messages.noGroups)}
                       </Text>
                     ),
@@ -181,7 +181,7 @@ const User = () => {
                           <TableBody />
                         </Table>
                       ) : (
-                        <Text className="pf-v5-u-mx-lg pf-v5-u-my-sm">{intl.formatMessage(messages.noPermissions)}</Text>
+                        <Text className="pf-v6-u-mx-lg pf-v6-u-my-sm">{intl.formatMessage(messages.noPermissions)}</Text>
                       )
                     ) : (
                       <SkeletonTable rows={accessCount} columns={nestedPermissionsCells} variant={TableVariant.compact} />
@@ -250,9 +250,9 @@ const User = () => {
                     <TextContent>
                       {`${intl.formatMessage(messages.orgAdministrator)}: `}
                       {user?.is_org_admin ? (
-                        <CheckIcon key="yes-icon" className="pf-v5-u-mx-sm" />
+                        <CheckIcon key="yes-icon" className="pf-v6-u-mx-sm" />
                       ) : (
-                        <CloseIcon key="no-icon" className="pf-v5-u-mx-sm" />
+                        <CloseIcon key="no-icon" className="pf-v6-u-mx-sm" />
                       )}
                       {intl.formatMessage(user?.is_org_admin ? messages.yes : messages.no)}
                     </TextContent>
@@ -307,7 +307,7 @@ const User = () => {
         </Stack>
       ) : (
         <Fragment>
-          <section className="pf-v5-c-page__main-breadcrumb pf-v5-u-pb-md">
+          <section className="pf-v6-c-page__main-breadcrumb pf-v6-u-pb-md">
             <Breadcrumbs {...breadcrumbsList} />
           </section>
           <EmptyWithAction
@@ -316,7 +316,7 @@ const User = () => {
             actions={[
               <Button
                 key="back-button"
-                className="pf-v5-u-mt-xl"
+                className="pf-v6-u-mt-xl"
                 ouiaId="back-button"
                 variant="primary"
                 aria-label="Back to previous page"

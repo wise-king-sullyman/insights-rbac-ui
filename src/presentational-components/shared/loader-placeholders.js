@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import SkeletonTable from '@patternfly/react-component-groups/dist/dynamic/SkeletonTable';
 import { Form, FormGroup, Skeleton as PFSkeleton } from '@patternfly/react-core';
-import { Skeleton } from '@redhat-cloud-services/frontend-components/Skeleton';
+import { Skeleton } from '@ausuliv/frontend-components/Skeleton';
 
 export const AppPlaceholder = () => (
   <div>

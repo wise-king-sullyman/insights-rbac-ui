@@ -5,8 +5,8 @@ import { Outlet, useNavigationType, useParams } from 'react-router-dom';
 import { shallowEqual, useSelector, useDispatch } from 'react-redux';
 import { Button, Level, LevelItem, Text, TextContent } from '@patternfly/react-core';
 import { Dropdown, DropdownItem, KebabToggle } from '@patternfly/react-core/deprecated';
-import { PageHeaderTitle } from '@redhat-cloud-services/frontend-components/PageHeader';
-import { useChrome } from '@redhat-cloud-services/frontend-components/useChrome';
+import { PageHeaderTitle } from '@ausuliv/frontend-components/PageHeader';
+import { useChrome } from '@ausuliv/frontend-components/useChrome';
 import { fetchRole, fetchRolesWithPolicies } from '../../redux/actions/role-actions';
 import { TopToolbar } from '../../presentational-components/shared/top-toolbar';
 import { fetchGroup, fetchRolesForGroup, fetchSystemGroup } from '../../redux/actions/group-actions';
@@ -201,7 +201,7 @@ const Role = ({ onDelete }) => {
         </Fragment>
       ) : (
         <Fragment>
-          <section className="pf-v5-c-page__main-breadcrumb pf-v5-u-pb-md">
+          <section className="pf-v6-c-page__main-breadcrumb pf-v6-u-pb-md">
             <RbacBreadcrumbs {...breadcrumbsList()} />
           </section>
           <EmptyWithAction
@@ -210,7 +210,7 @@ const Role = ({ onDelete }) => {
             actions={[
               <Button
                 key="back-button"
-                className="pf-v5-u-mt-xl"
+                className="pf-v6-u-mt-xl"
                 ouiaId="back-button"
                 variant="primary"
                 aria-label="Back to previous page"

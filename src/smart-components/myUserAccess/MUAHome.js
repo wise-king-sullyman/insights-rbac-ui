@@ -2,8 +2,8 @@ import React, { useEffect, useState, useContext } from 'react';
 import { NavLink, useSearchParams } from 'react-router-dom';
 import { Dropdown, DropdownItem, DropdownToggle } from '@patternfly/react-core/deprecated';
 
-import { PageHeaderTitle } from '@redhat-cloud-services/frontend-components/PageHeader';
-import { useChrome } from '@redhat-cloud-services/frontend-components/useChrome';
+import { PageHeaderTitle } from '@ausuliv/frontend-components/PageHeader';
+import { useChrome } from '@ausuliv/frontend-components/useChrome';
 import { Text, Spinner } from '@patternfly/react-core';
 import StatusLabel from '../../presentational-components/myUserAccess/StatusLabel';
 import PermissionsContext from '../../utilities/permissions-context';

@@ -10,7 +10,7 @@ import AddUserToGroup from '../../../smart-components/user/add-user-to-group/add
 import { FETCH_GROUPS, ADD_MEMBERS_TO_GROUP } from '../../../redux/action-types.js';
 import PermissionsContext from '../../../utilities/permissions-context';
 import messages from '../../../Messages';
-import { addNotification } from '@redhat-cloud-services/frontend-components-notifications/';
+import { addNotification } from '@ausuliv/frontend-components-notifications/';
 
 const mockStore = configureMockStore([thunk]);
 const initialState = {
@@ -39,8 +39,8 @@ const renderComponent = (userName = 'testuser', store, isAdmin = true) => {
   );
 };
 
-jest.mock('@redhat-cloud-services/frontend-components-notifications/', () => ({
-  ...jest.requireActual('@redhat-cloud-services/frontend-components-notifications/'),
+jest.mock('@ausuliv/frontend-components-notifications/', () => ({
+  ...jest.requireActual('@ausuliv/frontend-components-notifications/'),
   addNotification: jest.fn(),
 }));
 

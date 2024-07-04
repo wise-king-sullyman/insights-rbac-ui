@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import DateFormat from '@redhat-cloud-services/frontend-components/DateFormat';
+import DateFormat from '@ausuliv/frontend-components/DateFormat';
 import { Text } from '@patternfly/react-core';
 import { TableVariant } from '@patternfly/react-table';
 import { Table, TableBody, TableHeader } from '@patternfly/react-table/deprecated';
@@ -59,7 +59,7 @@ export const createRows = (data, selectedRows, intl, expanded, adminGroup) =>
                               {intl.formatMessage(messages.addRoleToThisGroup)}
                             </AppLink>
                           ),
-                        props: { className: 'pf-v5-u-text-align-right' },
+                        props: { className: 'pf-v6-u-text-align-right' },
                       },
                     ],
                   }))}
@@ -68,7 +68,7 @@ export const createRows = (data, selectedRows, intl, expanded, adminGroup) =>
                   <TableBody />
                 </Table>
               ) : (
-                <Text className="pf-v5-u-mx-lg pf-v5-u-my-sm">{intl.formatMessage(messages.noGroups)}</Text>
+                <Text className="pf-v6-u-mx-lg pf-v6-u-my-sm">{intl.formatMessage(messages.noGroups)}</Text>
               ),
           },
         ],
@@ -112,7 +112,7 @@ export const createRows = (data, selectedRows, intl, expanded, adminGroup) =>
                   <TableBody />
                 </Table>
               ) : (
-                <Text className="pf-v5-u-mx-lg pf-v5-u-my-sm">{intl.formatMessage(messages.noPermissions)}</Text>
+                <Text className="pf-v6-u-mx-lg pf-v6-u-my-sm">{intl.formatMessage(messages.noPermissions)}</Text>
               ),
           },
         ],

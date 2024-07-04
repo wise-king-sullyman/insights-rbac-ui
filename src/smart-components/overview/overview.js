@@ -26,7 +26,7 @@ import {
   PageSection,
   Title,
 } from '@patternfly/react-core';
-import { PageHeader, PageHeaderTitle } from '@redhat-cloud-services/frontend-components/PageHeader';
+import { PageHeader, PageHeaderTitle } from '@ausuliv/frontend-components/PageHeader';
 import { useIntl } from 'react-intl';
 import messages from '../../Messages';
 import { ArrowRightIcon, CubesIcon, ExternalLinkAltIcon } from '@patternfly/react-icons';
@@ -143,7 +143,7 @@ const Overview = () => {
             </DataListItemRow>
             <DataListContent
               hasNoPadding
-              className="pf-v5-u-px-lg pf-v5-u-pb-xl"
+              className="pf-v6-u-px-lg pf-v6-u-pb-xl"
               aria-label="About default groups - detailed explanation"
               id="about-default-groups"
               data-ouia-component-id="about-view-default-group"
@@ -170,7 +170,7 @@ const Overview = () => {
               <Td dataLabel="Recommended content category">
                 <Label color="green">{intl.formatMessage(messages.labelQuickStart)}</Label>
               </Td>
-              <Td dataLabel="Recommended content link" className="pf-v5-u-text-align-right">
+              <Td dataLabel="Recommended content link" className="pf-v6-u-text-align-right">
                 <a
                   href="https://console.redhat.com/iam/user-access/overview?quickstart=rbac-admin-vuln-permissions"
                   title="Link to Quick start - Restricting access to a service to a team"
@@ -184,7 +184,7 @@ const Overview = () => {
               <Td dataLabel="Recommended content category">
                 <Label color="green">{intl.formatMessage(messages.labelQuickStart)}</Label>
               </Td>
-              <Td dataLabel="Recommended content link" className="pf-v5-u-text-align-right">
+              <Td dataLabel="Recommended content link" className="pf-v6-u-text-align-right">
                 <a
                   href="http://console.redhat.com/iam/user-access/overview?quickstart=rbac-granular-malware-rhel-access"
                   title="Link to Quick start - Configuring granular permissions by service"
@@ -198,7 +198,7 @@ const Overview = () => {
               <Td dataLabel="Recommended content category">
                 <Label color="green">{intl.formatMessage(messages.labelQuickStart)}</Label>
               </Td>
-              <Td dataLabel="Recommended content link" className="pf-v5-u-text-align-right">
+              <Td dataLabel="Recommended content link" className="pf-v6-u-text-align-right">
                 <a
                   href="http://console.redhat.com/iam/user-access/overview?quickstart=rbac-read-only-vuln-permissions"
                   title="Link to Quick start - Configuring read-only permissions for a team"
@@ -212,7 +212,7 @@ const Overview = () => {
               <Td dataLabel="Recommended content category">
                 <Label color="green">{intl.formatMessage(messages.labelQuickStart)}</Label>
               </Td>
-              <Td dataLabel="Recommended content link" className="pf-v5-u-text-align-right">
+              <Td dataLabel="Recommended content link" className="pf-v6-u-text-align-right">
                 <a
                   href="http://console.redhat.com/iam/user-access/overview?quickstart=rbac-reducing-permissions"
                   title="Link to Quick start - Reducing permissions across my organization"
@@ -226,7 +226,7 @@ const Overview = () => {
               <Td dataLabel="Recommended content category">
                 <Label color="orange">{intl.formatMessage(messages.labelDocumentation)}</Label>
               </Td>
-              <Td dataLabel="Recommended content link" className="pf-v5-u-text-align-right">
+              <Td dataLabel="Recommended content link" className="pf-v6-u-text-align-right">
                 <a
                   href="https://access.redhat.com/documentation/en-us/red_hat_hybrid_cloud_console/2023/html/user_access_configuration_guide_for_role-based_access_control_rbac/index"
                   title="Link to User Access Configuration Guide for RBAC"
@@ -242,7 +242,7 @@ const Overview = () => {
               <Td dataLabel="Recommended content category">
                 <Label color="purple">{intl.formatMessage(messages.labelOtherResource)}</Label>
               </Td>
-              <Td dataLabel="Recommended content link" className="pf-v5-u-text-align-right">
+              <Td dataLabel="Recommended content link" className="pf-v6-u-text-align-right">
                 <a href="https://developers.redhat.com/api-catalog/api/rbac" title="Link to RBAC API" target="_blank" rel="noreferrer">
                   {intl.formatMessage(messages.viewApiSiteLink)} <ExternalLinkAltIcon />
                 </a>
@@ -253,7 +253,7 @@ const Overview = () => {
               <Td dataLabel="Recommended content category">
                 <Label color="purple">{intl.formatMessage(messages.labelOtherResource)}</Label>
               </Td>
-              <Td dataLabel="Recommended content link" className="pf-v5-u-text-align-right">
+              <Td dataLabel="Recommended content link" className="pf-v6-u-text-align-right">
                 <a
                   href="https://www.redhat.com/en/blog/role-based-access-control-red-hat-hybrid-cloud-console"
                   title="Link to Red Hat blog post on Console RBAC"

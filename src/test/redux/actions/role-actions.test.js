@@ -3,7 +3,7 @@ import configureStore from 'redux-mock-store';
 import promiseMiddleware from 'redux-promise-middleware';
 import { fetchRoles } from '../../../redux/actions/role-actions';
 import { FETCH_ROLES } from '../../../redux/action-types';
-import { notificationsMiddleware } from '@redhat-cloud-services/frontend-components-notifications/';
+import { notificationsMiddleware } from '@ausuliv/frontend-components-notifications/';
 
 import * as RoleHelper from '../../../helpers/role/role-helper';
 

@@ -3,9 +3,18 @@ import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
-import { Button, Modal, ModalVariant, StackItem, Stack, TextContent } from '@patternfly/react-core';
-import { addNotification } from '@redhat-cloud-services/frontend-components-notifications/';
-import { useChrome } from '@redhat-cloud-services/frontend-components/useChrome';
+import {
+	Button,
+	StackItem,
+	Stack,
+	TextContent
+} from '@patternfly/react-core';
+import {
+	Modal,
+	ModalVariant
+} from '@patternfly/react-core/deprecated';
+import { addNotification } from '@ausuliv/frontend-components-notifications/';
+import { useChrome } from '@ausuliv/frontend-components/useChrome';
 import { addMembersToGroup, fetchMembersForGroup, fetchGroups } from '../../../redux/actions/group-actions';
 import UsersList from '../add-group/users-list';
 import ActiveUser from '../../../presentational-components/shared/ActiveUsers';

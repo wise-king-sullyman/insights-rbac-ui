@@ -33,7 +33,7 @@ const App = () => {
   return (
     <PermissionsContext.Provider value={{ ...userData }}>
       <ErroReducerCatcher>
-        <section className="rbac-c-root pf-v5-c-page__main-section pf-v5-u-m-0 pf-v5-u-p-0">
+        <section className="rbac-c-root pf-v6-c-page__main-section pf-v6-u-m-0 pf-v6-u-p-0">
           <Routing />
         </section>
       </ErroReducerCatcher>

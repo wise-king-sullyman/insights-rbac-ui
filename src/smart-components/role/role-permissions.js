@@ -220,7 +220,7 @@ const Permissions = ({ cantAddPermissions, isLoading }) => {
   const data = filteredRows.slice(pagination.offset, pagination.offset + pagination.limit);
 
   return (
-    <section className="pf-v5-c-page__main-section rbac-c-role__permissions">
+    <section className="pf-v6-c-page__main-section rbac-c-role__permissions">
       <WarningModal
         title={deleteInfo.title}
         isOpen={showRemoveModal}

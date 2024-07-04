@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import { Text, TextContent, TextVariants, Flex, FlexItem } from '@patternfly/react-core';
 import { ToolbarTitlePlaceholder } from './loader-placeholders';
 import RbacBreadcrumbs from './breadcrumbs';
-import { PageHeader, PageHeaderTitle } from '@redhat-cloud-services/frontend-components/PageHeader';
+import { PageHeader, PageHeaderTitle } from '@ausuliv/frontend-components/PageHeader';
 
 import './top-toolbar.scss';
 
 export const TopToolbar = ({ children, breadcrumbs }) => (
   <Fragment>
     {breadcrumbs && (
-      <section className="pf-v5-c-page__main-breadcrumb">
+      <section className="pf-v6-c-page__main-breadcrumb">
         <RbacBreadcrumbs {...breadcrumbs} />
       </section>
     )}
@@ -31,7 +31,7 @@ TopToolbar.defaultProps = {
 export const TopToolbarTitle = ({ title, renderTitleTag, description, children }) => (
   <Fragment>
     <Flex>
-      <FlexItem className="pf-v5-u-mb-sm">
+      <FlexItem className="pf-v6-u-mb-sm">
         <PageHeaderTitle title={title || <ToolbarTitlePlaceholder />} className="rbac-page-header__title" />
       </FlexItem>
       <FlexItem alignSelf={{ modifier: 'alignSelfCenter' }}>{renderTitleTag && renderTitleTag()}</FlexItem>

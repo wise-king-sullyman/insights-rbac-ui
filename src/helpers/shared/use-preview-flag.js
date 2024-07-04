@@ -1,4 +1,4 @@
-import useChrome from '@redhat-cloud-services/frontend-components/useChrome';
+import useChrome from '@ausuliv/frontend-components/useChrome';
 import { useFlag } from '@unleash/proxy-client-react';
 
 export const usePreviewFlag = (flag) => {

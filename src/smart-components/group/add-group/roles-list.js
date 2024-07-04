@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 import { useDispatch, useSelector, shallowEqual } from 'react-redux';
 import { sortable } from '@patternfly/react-table';
-import { useChrome } from '@redhat-cloud-services/frontend-components/useChrome';
+import { useChrome } from '@ausuliv/frontend-components/useChrome';
 import { defaultCompactSettings } from '../../../helpers/shared/pagination';
 import { mappedProps } from '../../../helpers/shared/helpers';
 import { TableToolbarView } from '../../../presentational-components/shared/table-toolbar-view';

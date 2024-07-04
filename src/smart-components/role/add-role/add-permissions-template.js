@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Chip, ChipGroup, Text, TextContent, Title, Button, Popover, Alert, AlertActionCloseButton } from '@patternfly/react-core';
+import {
+	Label, LabelGroup, Text,
+	TextContent,
+	Title,
+	Button,
+	Popover,
+	Alert,
+	AlertActionCloseButton
+} from '@patternfly/react-core';
+
 import useFormApi from '@data-driven-forms/react-form-renderer/use-form-api';
 import QuestionCircleIcon from '@patternfly/react-icons/dist/js/icons/outlined-question-circle-icon';
 import { useIntl } from 'react-intl';
@@ -22,16 +31,16 @@ const AddPermissionTemplate = ({ formFields }) => {
     <div className="rbac">
       {selectedPermissions.length > 0 ? (
         <div className="rbac-c-selected-chips">
-          <ChipGroup categoryName={intl.formatMessage(messages.selectedPermissions)}>
+          <LabelGroup categoryName={intl.formatMessage(messages.selectedPermissions)}>
             {/* immutable reverse */}
             {selectedPermissions
               .reduce((acc, i) => [i, ...acc], [])
               .map(({ uuid }) => (
-                <Chip key={uuid} color="blue" isTruncated onClick={() => setSelectedPermissions(selectedPermissions.filter((p) => p.uuid !== uuid))}>
+                <Label variant="outline" key={uuid} color="blue" isTruncated onClose={() => setSelectedPermissions(selectedPermissions.filter((p) => p.uuid !== uuid))}>
                   {uuid}
-                </Chip>
+                </Label>
               ))}
-          </ChipGroup>
+          </LabelGroup>
         </div>
       ) : null}
       <Title headingLevel="h1" size="xl" className="rbac-c-add-permission-title">

@@ -7,7 +7,7 @@ import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { render } from '@testing-library/react';
 import promiseMiddleware from 'redux-promise-middleware';
 import GroupRoles from '../../../../smart-components/group/role/group-roles';
-import notificationsMiddleware from '@redhat-cloud-services/frontend-components-notifications/notificationsMiddleware';
+import notificationsMiddleware from '@ausuliv/frontend-components-notifications/notificationsMiddleware';
 import { rolesInitialState } from '../../../../redux/reducers/role-reducer';
 import { groupsInitialState } from '../../../../redux/reducers/group-reducer';
 

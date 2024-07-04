@@ -3,10 +3,8 @@ import {
   Button,
   EmptyState,
   EmptyStateVariant,
-  EmptyStateIcon,
   EmptyStateBody,
   EmptyStateActions,
-  EmptyStateHeader,
   EmptyStateFooter,
 } from '@patternfly/react-core';
 import { CheckCircleIcon } from '@patternfly/react-icons';
@@ -21,12 +19,7 @@ const AddRoleSuccess = ({ onClose }) => {
   const { setHideForm, setWizardSuccess } = useContext(AddRoleWizardContext);
   const intl = useIntl();
   return (
-    <EmptyState variant={EmptyStateVariant.lg}>
-      <EmptyStateHeader
-        titleText={<>{intl.formatMessage(messages.roleCreatedSuccessfully)}</>}
-        icon={<EmptyStateIcon color="green" icon={CheckCircleIcon} />}
-        headingLevel="h4"
-      />
+    <EmptyState headingLevel="h4" icon={CheckCircleIcon} titleText={<>{intl.formatMessage(messages.roleCreatedSuccessfully)}</>} variant={EmptyStateVariant.lg}>
       <EmptyStateBody></EmptyStateBody>
       <EmptyStateFooter>
         <Button onClick={onClose} variant="primary">

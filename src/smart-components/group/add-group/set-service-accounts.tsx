@@ -36,7 +36,7 @@ const SetServiceAccounts: React.FunctionComponent<SetServiceAccountProps> = ({ n
             <TextContent>
               {intl.formatMessage(messages.addServiceAccountsToGroupDescription)}
               <Alert
-                className="pf-v5-u-mt-sm rbac-service-accounts-alert"
+                className="pf-v6-u-mt-sm rbac-service-accounts-alert"
                 variant="info"
                 component="span"
                 isInline

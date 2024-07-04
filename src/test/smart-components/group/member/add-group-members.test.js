@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 import { MemoryRouter } from 'react-router-dom';
 import promiseMiddleware from 'redux-promise-middleware';
-import { notificationsMiddleware } from '@redhat-cloud-services/frontend-components-notifications/';
+import { notificationsMiddleware } from '@ausuliv/frontend-components-notifications/';
 import AddGroupMembers from '../../../../smart-components/group/member/add-group-members';
 import { fireEvent, render, screen } from '@testing-library/react';
 import * as UserHelper from '../../../../helpers/user/user-helper';

@@ -6,7 +6,7 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import configureStore from 'redux-mock-store';
 import { MemoryRouter } from 'react-router-dom';
 import promiseMiddleware from 'redux-promise-middleware';
-import { notificationsMiddleware } from '@redhat-cloud-services/frontend-components-notifications/';
+import { notificationsMiddleware } from '@ausuliv/frontend-components-notifications/';
 import EditGroupModal from '../../../smart-components/group/edit-group-modal';
 import { groupsInitialState } from '../../../redux/reducers/group-reducer';
 import * as GroupActions from '../../../redux/actions/group-actions';

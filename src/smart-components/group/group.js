@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import useChrome from '@redhat-cloud-services/frontend-components/useChrome';
+import useChrome from '@ausuliv/frontend-components/useChrome';
 import { useLocation, useParams, Outlet, useNavigationType } from 'react-router-dom';
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import { FormattedMessage, useIntl } from 'react-intl';
@@ -95,7 +95,7 @@ const Group = () => {
   const defaultGroupChangedIcon = (name) => (
     <div style={{ display: 'inline-flex' }}>
       {name}
-      <div className="pf-v5-u-ml-sm">
+      <div className="pf-v6-u-ml-sm">
         <Popover
           aria-label="default-group-icon"
           bodyContent={
@@ -130,7 +130,7 @@ const Group = () => {
           />
         }
       >
-        <OutlinedQuestionCircleIcon className="rbac-default-group-info-icon pf-v5-u-mt-sm" />
+        <OutlinedQuestionCircleIcon className="rbac-default-group-info-icon pf-v6-u-mt-sm" />
       </Popover>
     </div>
   );
@@ -226,7 +226,7 @@ const Group = () => {
                 isInline
                 title={intl.formatMessage(messages.defaultAccessGroupChanged)}
                 action={<AlertActionCloseButton onClose={() => setShowDefaultGroupChangedInfo(false)} />}
-                className="pf-v5-u-mb-lg pf-v5-u-mt-sm"
+                className="pf-v6-u-mb-lg pf-v6-u-mt-sm"
               >
                 <FormattedMessage
                   {...messages.defaultAccessGroupNameChanged}
@@ -251,7 +251,7 @@ const Group = () => {
         </Fragment>
       ) : (
         <Fragment>
-          <section className="pf-v5-c-page__main-breadcrumb pf-v5-u-pb-md">
+          <section className="pf-v6-c-page__main-breadcrumb pf-v6-u-pb-md">
             <RbacBreadcrumbs {...breadcrumbsList()} />
           </section>
           <EmptyWithAction
@@ -260,7 +260,7 @@ const Group = () => {
             actions={[
               <Button
                 key="back-button"
-                className="pf-v5-u-mt-xl"
+                className="pf-v6-u-mt-xl"
                 ouiaId="back-button"
                 variant="primary"
                 aria-label="Back to previous page"

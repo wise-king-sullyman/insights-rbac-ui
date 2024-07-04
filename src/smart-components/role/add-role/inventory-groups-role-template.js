@@ -11,7 +11,7 @@ const InventoryGroupsRoleTemplate = ({ formFields }) => {
 
   return (
     <div className="rbac">
-      <Title headingLevel="h1" size="xl" className="pf-v5-u-mb-lg">
+      <Title headingLevel="h1" size="xl" className="pf-v6-u-mb-lg">
         {intl.formatMessage(enableWorkspacesNameChange ? messages.workspacesAccessTitle : messages.inventoryGroupsAccessTitle)}
       </Title>
       {formFields}

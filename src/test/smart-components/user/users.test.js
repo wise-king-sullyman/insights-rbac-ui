@@ -7,7 +7,7 @@ import userEvent from '@testing-library/user-event';
 import configureStore from 'redux-mock-store';
 import promiseMiddleware from 'redux-promise-middleware';
 import Users from '../../../smart-components/user/users';
-import notificationsMiddleware from '@redhat-cloud-services/frontend-components-notifications/notificationsMiddleware';
+import notificationsMiddleware from '@ausuliv/frontend-components-notifications/notificationsMiddleware';
 import { usersInitialState } from '../../../redux/reducers/user-reducer';
 import * as UserHelper from '../../../helpers/user/user-helper';
 import { defaultSettings } from '../../../helpers/shared/pagination';

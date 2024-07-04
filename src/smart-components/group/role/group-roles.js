@@ -4,9 +4,9 @@ import { FormattedMessage, useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 import { Outlet, useParams } from 'react-router-dom';
 import { Button, Tooltip } from '@patternfly/react-core';
-import { useChrome } from '@redhat-cloud-services/frontend-components/useChrome';
-import Section from '@redhat-cloud-services/frontend-components/Section';
-import DateFormat from '@redhat-cloud-services/frontend-components/DateFormat';
+import { useChrome } from '@ausuliv/frontend-components/useChrome';
+import Section from '@ausuliv/frontend-components/Section';
+import DateFormat from '@ausuliv/frontend-components/DateFormat';
 import { defaultCompactSettings, defaultSettings } from '../../../helpers/shared/pagination';
 import { TableToolbarView } from '../../../presentational-components/shared/table-toolbar-view';
 import {

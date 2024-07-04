@@ -1,6 +1,6 @@
 import { Navigate, Route as RouterRoute, Routes as RouterRoutes, matchPath, useLocation } from 'react-router-dom';
 import React, { lazy, Suspense, useEffect, useMemo } from 'react';
-import { useChrome } from '@redhat-cloud-services/frontend-components/useChrome';
+import { useChrome } from '@ausuliv/frontend-components/useChrome';
 import { AppPlaceholder } from './presentational-components/shared/loader-placeholders';
 import pathnames from './utilities/pathnames';
 import QuickstartsTestButtons from './utilities/quickstarts-test-buttons';

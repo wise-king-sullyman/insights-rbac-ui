@@ -1,25 +1,24 @@
 import React, { useEffect, useReducer } from 'react';
 import {
-  Button,
-  Grid,
-  GridItem,
-  Text,
-  TextVariants,
-  FormGroup,
-  Tooltip,
-  Divider,
-  MenuToggle,
-  TextInputGroup,
-  TextInputGroupMain,
-  TextInputGroupUtilities,
-  SelectList,
-  SelectOption,
-  Select,
-  Spinner,
-  Badge,
-  Chip,
-  ChipGroup,
+	Label, LabelGroup, Button,
+	Grid,
+	GridItem,
+	Text,
+	TextVariants,
+	FormGroup,
+	Tooltip,
+	Divider,
+	MenuToggle,
+	TextInputGroup,
+	TextInputGroupMain,
+	TextInputGroupUtilities,
+	SelectList,
+	SelectOption,
+	Select,
+	Spinner,
+	Badge
 } from '@patternfly/react-core';
+
 import { TimesIcon } from '@patternfly/react-icons';
 import { shallowEqual, useSelector, useDispatch } from 'react-redux';
 import useFieldApi from '@data-driven-forms/react-form-renderer/use-field-api';
@@ -207,18 +206,18 @@ const InventoryGroupsRole = (props) => {
             isExpanded={state[permissionID].isOpen}
           >
             {state[permissionID].selected.length > 0 ? (
-              <ChipGroup aria-label="Current selections">
-                <Chip
+              <LabelGroup aria-label="Current selections">
+                <Label variant="outline"
                   closeBtnAriaLabel="Clear all"
-                  badge={<Badge isRead>{state[permissionID].selected.length}</Badge>}
-                  onClick={(ev) => {
+                  
+                  onClose={(ev) => {
                     ev.stopPropagation();
                     clearSelection(permissionID);
                   }}
                 >
                   selected
-                </Chip>
-              </ChipGroup>
+                 <Badge isRead>{state[permissionID].selected.length}</Badge></Label>
+              </LabelGroup>
             ) : null}
           </TextInputGroupMain>
 
@@ -264,7 +263,7 @@ const InventoryGroupsRole = (props) => {
             >
               <SelectList>
                 {options?.length > 0 ? (
-                  <SelectOption className="pf-v5-u-link-color" key={`${permissionID}-all`} value="select-all">
+                  <SelectOption className="pf-v6-u-link-color" key={`${permissionID}-all`} value="select-all">
                     <FormattedMessage
                       {...messages.selectAll}
                       values={{
@@ -328,12 +327,12 @@ const InventoryGroupsRole = (props) => {
   return (
     <Grid hasGutter>
       <GridItem md={3} className="rbac-m-hide-on-sm">
-        <Text component={TextVariants.h4} className="rbac-bold-text pf-v5-u-mt-sm">
+        <Text component={TextVariants.h4} className="rbac-bold-text pf-v6-u-mt-sm">
           {intl.formatMessage(messages.permissions)}
         </Text>
       </GridItem>
       <GridItem lg={9} md={6} className="rbac-m-hide-on-sm">
-        <Text component={TextVariants.h4} className="rbac-bold-text pf-v5-u-mt-sm">
+        <Text component={TextVariants.h4} className="rbac-bold-text pf-v6-u-mt-sm">
           {intl.formatMessage(enableWorkspacesNameChange ? messages.workspacesDefinition : messages.groupDefinition)}
         </Text>
       </GridItem>

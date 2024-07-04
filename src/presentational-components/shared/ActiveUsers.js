@@ -5,7 +5,7 @@ import { Text, TextVariants } from '@patternfly/react-core';
 import { ExternalLinkAltIcon } from '@patternfly/react-icons';
 import PermissionsContext from '../../utilities/permissions-context';
 import messages from '../../Messages';
-import { useChrome } from '@redhat-cloud-services/frontend-components/useChrome';
+import { useChrome } from '@ausuliv/frontend-components/useChrome';
 
 const ActiveUser = ({ linkDescription, linkTitle }) => {
   const intl = useIntl();
@@ -14,7 +14,7 @@ const ActiveUser = ({ linkDescription, linkTitle }) => {
   const prefix = chrome.isProd() ? '' : `${env}.`;
   const { orgAdmin } = useContext(PermissionsContext);
   return orgAdmin ? (
-    <Text className="pf-v5-u-mt-0" component={TextVariants.h7}>
+    <Text className="pf-v6-u-mt-0" component={TextVariants.h7}>
       {`${intl.formatMessage(messages.usersDescription)} `}
       {linkDescription}
       <Text
@@ -29,7 +29,7 @@ const ActiveUser = ({ linkDescription, linkTitle }) => {
       .
     </Text>
   ) : (
-    <Text className="pf-v5-u-mt-0" component={TextVariants.h7}>
+    <Text className="pf-v6-u-mt-0" component={TextVariants.h7}>
       {`${intl.formatMessage(messages.usersDescription)} `}
     </Text>
   );

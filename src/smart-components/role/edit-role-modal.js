@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import componentTypes from '@data-driven-forms/react-form-renderer/component-types';
 import validatorTypes from '@data-driven-forms/react-form-renderer/validator-types';
-import { addNotification } from '@redhat-cloud-services/frontend-components-notifications/';
+import { addNotification } from '@ausuliv/frontend-components-notifications/';
 import { useIntl } from 'react-intl';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';

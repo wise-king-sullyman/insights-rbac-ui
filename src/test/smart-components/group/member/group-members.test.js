@@ -6,7 +6,7 @@ import configureStore from 'redux-mock-store';
 import { render } from '@testing-library/react';
 import promiseMiddleware from 'redux-promise-middleware';
 import GroupMembers from '../../../../smart-components/group/member/group-members';
-import notificationsMiddleware from '@redhat-cloud-services/frontend-components-notifications/notificationsMiddleware';
+import notificationsMiddleware from '@ausuliv/frontend-components-notifications/notificationsMiddleware';
 import * as GroupActions from '../../../../redux/actions/group-actions';
 import { FETCH_GROUPS, FETCH_MEMBERS_FOR_GROUP } from '../../../../redux/action-types';
 

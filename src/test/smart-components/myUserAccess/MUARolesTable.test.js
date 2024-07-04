@@ -6,7 +6,7 @@ import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import { fireEvent, render, screen } from '@testing-library/react';
 import promiseMiddleware from 'redux-promise-middleware';
-import { notificationsMiddleware } from '@redhat-cloud-services/frontend-components-notifications/';
+import { notificationsMiddleware } from '@ausuliv/frontend-components-notifications/';
 
 import MUARolesTable from '../../../smart-components/myUserAccess/MUARolesTable';
 import { createFilter } from '../../../smart-components/myUserAccess/CommonBundleView';
@@ -165,7 +165,7 @@ describe('<MUARolesTable />', () => {
 
     expect(() =>
       screen.getByText('Resource definitions', {
-        selector: '.pf-v5-c-modal-box__title-text',
+        selector: '.pf-v6-c-modal-box__title-text',
       })
     ).toThrow();
     await act(async () => {
@@ -179,7 +179,7 @@ describe('<MUARolesTable />', () => {
     });
     expect(
       screen.getByText('Resource definitions', {
-        selector: '.pf-v5-c-modal-box__title-text',
+        selector: '.pf-v6-c-modal-box__title-text',
       })
     ).toBeInTheDocument();
     await act(async () => {
@@ -187,7 +187,7 @@ describe('<MUARolesTable />', () => {
     });
     expect(() =>
       screen.getByText('Resource definitions', {
-        selector: '.pf-v5-c-modal-box__title-text',
+        selector: '.pf-v6-c-modal-box__title-text',
       })
     ).toThrow();
   });

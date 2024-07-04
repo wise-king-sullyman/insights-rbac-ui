@@ -1,5 +1,5 @@
 import React from 'react';
-import PrimaryToolbar from '@redhat-cloud-services/frontend-components/PrimaryToolbar';
+import PrimaryToolbar from '@ausuliv/frontend-components/PrimaryToolbar';
 import { useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 import messages from '../../Messages';

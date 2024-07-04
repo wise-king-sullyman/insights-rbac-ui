@@ -5,7 +5,7 @@ import { useParams, Outlet } from 'react-router-dom';
 import { TableToolbarView } from '../../presentational-components/shared/table-toolbar-view';
 import { createRows, isInventoryPermission } from './role-resource-definitions-table-helpers';
 import { TopToolbar } from '../../presentational-components/shared/top-toolbar';
-import { PageHeaderTitle } from '@redhat-cloud-services/frontend-components/PageHeader';
+import { PageHeaderTitle } from '@ausuliv/frontend-components/PageHeader';
 import { ToolbarTitlePlaceholder } from '../../presentational-components/shared/loader-placeholders';
 import { defaultSettings } from '../../helpers/shared/pagination';
 import { fetchRole } from '../../redux/actions/role-actions';
@@ -121,7 +121,7 @@ const ResourceDefinitions = () => {
           </LevelItem>
         </Level>
       </TopToolbar>
-      <section className="pf-v5-c-page__main-section rbac-c-role__permissions">
+      <section className="pf-v6-c-page__main-section rbac-c-role__permissions">
         <TextContent>
           <Text component={TextVariants.h1}>{intl.formatMessage(messages.definedResources)}</Text>
         </TextContent>

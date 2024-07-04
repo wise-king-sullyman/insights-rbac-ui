@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@patternfly/react-core';
-import useChrome from '@redhat-cloud-services/frontend-components/useChrome';
+import useChrome from '@ausuliv/frontend-components/useChrome';
 import pathnames from '../utilities/pathnames';
 import monitorSampleAppQuickStart from './sample-quickstart';
 import { QuickStartContext } from '@patternfly/quickstarts';

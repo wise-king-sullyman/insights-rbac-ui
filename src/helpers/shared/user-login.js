@@ -7,7 +7,7 @@ import {
   interceptor401,
   interceptor500,
   errorInterceptor,
-} from '@redhat-cloud-services/frontend-components-utilities/interceptors';
+} from '@ausuliv/frontend-components-utilities/interceptors';
 
 import listPrincipals from '@redhat-cloud-services/rbac-client/dist/ListPrincipals';
 

@@ -6,7 +6,7 @@ import { Table, TableBody, TableHeader } from '@patternfly/react-table/deprecate
 import { useIntl } from 'react-intl';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import DateFormat from '@redhat-cloud-services/frontend-components/DateFormat';
+import DateFormat from '@ausuliv/frontend-components/DateFormat';
 import SkeletonTable from '@patternfly/react-component-groups/dist/dynamic/SkeletonTable';
 import AppLink from '../../presentational-components/shared/AppLink';
 import { getDateFormat } from '../../helpers/shared/helpers';
@@ -31,7 +31,7 @@ const DefaultPlatformPopover = ({ id, uuid, bodyContent }) => {
       >
         <OutlinedQuestionCircleIcon
           onClick={() => setPopoverVisible(!isPopoverVisible)}
-          className={classNames('pf-v5-c-question-circle-icon', { 'icon-active': isPopoverVisible })}
+          className={classNames('pf-v6-c-question-circle-icon', { 'icon-active': isPopoverVisible })}
         />
       </Popover>
     </span>

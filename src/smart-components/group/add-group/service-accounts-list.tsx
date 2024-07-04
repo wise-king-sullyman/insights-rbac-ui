@@ -3,8 +3,8 @@ import { ServiceAccountsState } from '../../../redux/reducers/service-account-re
 import { LAST_PAGE, ServiceAccount } from '../../../helpers/service-account/service-account-helper';
 import { useIntl } from 'react-intl';
 import { getDateFormat } from '../../../helpers/shared/helpers';
-import useChrome from '@redhat-cloud-services/frontend-components/useChrome';
-import DateFormat from '@redhat-cloud-services/frontend-components/DateFormat';
+import useChrome from '@ausuliv/frontend-components/useChrome';
+import DateFormat from '@ausuliv/frontend-components/DateFormat';
 import { useDispatch, useSelector } from 'react-redux';
 import { TableToolbarView } from '../../../presentational-components/shared/table-toolbar-view';
 import { fetchServiceAccounts } from '../../../redux/actions/service-account-actions';

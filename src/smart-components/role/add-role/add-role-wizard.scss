@@ -1,6 +1,6 @@
-.pf-v5-c-form {
-    .pf-v5-c-form__group {
-        .pf-v5-c-radio {
+.pf-v6-c-form {
+    .pf-v6-c-form__group {
+        .pf-v6-c-radio {
             padding-bottom: 8px;
              &:last-child{
                 padding-bottom: 0px;
@@ -9,7 +9,7 @@
     }
 }
 
-.pf-v5-c-select__menu {
+.pf-v6-c-select__menu {
     .rbac-c-select__scrollable-section {
         max-height: 365px; 
         overflow: auto;
@@ -20,21 +20,21 @@
     display: block;
 }
 
-.pf-v5-c-wizard__main-body{
+.pf-v6-c-wizard__main-body{
     .rbac-c-selected-chips {
-        padding-bottom: var(--pf-v5-global--spacer--md);
-        .pf-v5-c-chip-group {
-            background-color: var(--pf-v5-global--BackgroundColor--100);
-            .pf-v5-c-chip-group__list{
-                .pf-v5-c-chip-group__list-item {
-                    .pf-v5-c-chip {
-                        background-color: var(--pf-v5-global--palette--blue-50);
-                        border-radius: var(--pf-v5-global--BorderRadius--lg);
-                        .pf-v5-c-chip__text{
-                            font-size: var(--pf-v5-global--FontSize--sm);
+        padding-bottom: var(--pf-t--global--spacer--md);
+        .pf-v6-c-chip-group {
+            background-color: var(--pf-t--global--background--color--primary--default);
+            .pf-v6-c-chip-group__list{
+                .pf-v6-c-chip-group__list-item {
+                    .pf-v6-c-chip {
+                        background-color: var(--pf-t--global--color--brand--default);
+                        border-radius: var(--pf-t--global--border--radius--large);
+                        .pf-v6-c-chip__text{
+                            font-size: var(--pf-t--global--font--size--sm);
                         }
                     }
-                     .pf-v5-c-chip::before {
+                     .pf-v6-c-chip::before {
                          border-style: none;
                      }
                 }
@@ -47,9 +47,9 @@
 @media only screen and (max-width: 815px) {
     .rbac-c-permissions-table {
         .ins-c-primary-toolbar {
-            .pf-v5-c-toolbar__content {
+            .pf-v6-c-toolbar__content {
                 padding: 0px;
-                .pf-v5-c-toolbar__content-section {
+                .pf-v6-c-toolbar__content-section {
                     .pf-m-filter-group {
                         max-width: 30em;
                     }
@@ -62,8 +62,8 @@
 @media only screen and (max-width: 895px) {
     .rbac-c-permissions-table {
         .ins-c-primary-toolbar {
-            .pf-v5-c-toolbar__content {
-                .pf-v5-c-toolbar__content-section {
+            .pf-v6-c-toolbar__content {
+                .pf-v6-c-toolbar__content-section {
                     .pf-m-filter-group {
                         max-width: 32em;
                     }
@@ -76,9 +76,9 @@
 @media only screen and (min-width: 992px) {
     .rbac-c-permissions-table {
         .ins-c-primary-toolbar {
-            .pf-v5-c-toolbar__content {
+            .pf-v6-c-toolbar__content {
                 padding: 0px;
-                .pf-v5-c-toolbar__content-section {
+                .pf-v6-c-toolbar__content-section {
                     .pf-m-filter-group {
                         max-width: 25em;
                     }
@@ -91,8 +91,8 @@
 @media only screen and (min-width: 1055px) {
     .rbac-c-permissions-table {
         .ins-c-primary-toolbar {
-            .pf-v5-c-toolbar__content {
-                .pf-v5-c-toolbar__content-section {
+            .pf-v6-c-toolbar__content {
+                .pf-v6-c-toolbar__content-section {
                     .pf-m-filter-group {
                         max-width: 32em;
                     }
@@ -106,8 +106,8 @@
 @media only screen and (min-width: 1150px) {
     .rbac-c-permissions-table {
         .ins-c-primary-toolbar {
-            .pf-v5-c-toolbar__content {
-                .pf-v5-c-toolbar__content-section {
+            .pf-v6-c-toolbar__content {
+                .pf-v6-c-toolbar__content-section {
                     .pf-m-filter-group {
                         max-width: 35em;
                     }
@@ -118,16 +118,16 @@
 }
 
 .rbac-c-resource-type-select {
-    .pf-v5-c-menu__content {
+    .pf-v6-c-menu__content {
         max-height: 300px;
         overflow: auto;
         width: inherit;
     }
-    .pf-v5-c-menu__item-text {
+    .pf-v6-c-menu__item-text {
         white-space: pre-wrap;
     }
 }
 
 .rbac-c-disabled-row {
-    background-color: var(--pf-v5-global--disabled-color--300);
+    background-color: var(--pf-t--global--background--color--disabled--default);
 }

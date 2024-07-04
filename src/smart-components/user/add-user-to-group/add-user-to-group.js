@@ -2,9 +2,16 @@ import React, { useRef, useContext, useState, useEffect, Fragment } from 'react'
 import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 import { shallowEqual, useSelector, useDispatch } from 'react-redux';
-import { Modal, Button, ModalVariant, Alert } from '@patternfly/react-core';
-import { useChrome } from '@redhat-cloud-services/frontend-components/useChrome';
-import { addNotification } from '@redhat-cloud-services/frontend-components-notifications/';
+import {
+	Button,
+	Alert
+} from '@patternfly/react-core';
+import {
+	Modal,
+	ModalVariant
+} from '@patternfly/react-core/deprecated';
+import { useChrome } from '@ausuliv/frontend-components/useChrome';
+import { addNotification } from '@ausuliv/frontend-components-notifications/';
 import WarningModal from '@patternfly/react-component-groups/dist/dynamic/WarningModal';
 import useAppNavigate from '../../../hooks/useAppNavigate';
 import PermissionsContext from '../../../utilities/permissions-context';
@@ -109,7 +116,7 @@ const AddUserToGroup = ({ username }) => {
         actions={[
           <Button
             aria-label="Save"
-            className="pf-v5-u-mr-sm"
+            className="pf-v6-u-mr-sm"
             ouiaId="primary-save-button"
             variant="primary"
             key="save"

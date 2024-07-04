@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import DateFormat from '@redhat-cloud-services/frontend-components/DateFormat';
+import DateFormat from '@ausuliv/frontend-components/DateFormat';
 import AppLink from '../../presentational-components/shared/AppLink';
 import { getDateFormat } from '../../helpers/shared/helpers';
 import { defaultSettings } from '../../helpers/shared/pagination';

@@ -44,7 +44,7 @@ updates:
     - 4.97.0
     - 4.97.1
     - 4.97.2
-  - dependency-name: "@redhat-cloud-services/frontend-components"
+  - dependency-name: "@ausuliv/frontend-components"
     versions:
     - 2.5.3
     - 3.1.10
@@ -67,13 +67,13 @@ updates:
     - 4.0.22
     - 4.0.23
     - 4.0.25
-  - dependency-name: "@redhat-cloud-services/frontend-components-utilities"
+  - dependency-name: "@ausuliv/frontend-components-utilities"
     versions:
     - 3.1.0
   - dependency-name: "@patternfly/react-tokens"
     versions:
     - 4.10.0
     - 4.10.1
-  - dependency-name: "@redhat-cloud-services/frontend-components-notifications"
+  - dependency-name: "@ausuliv/frontend-components-notifications"
     versions:
     - 3.0.2

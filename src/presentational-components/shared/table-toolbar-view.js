@@ -4,7 +4,7 @@ import propTypes from 'prop-types';
 import messages from '../../Messages';
 import { TableVariant } from '@patternfly/react-table';
 import { Table, TableHeader, TableBody } from '@patternfly/react-table/deprecated';
-import TableToolbar from '@redhat-cloud-services/frontend-components/TableToolbar';
+import TableToolbar from '@ausuliv/frontend-components/TableToolbar';
 import SkeletonTable from '@patternfly/react-component-groups/dist/dynamic/SkeletonTable';
 import { Button, Pagination, EmptyStateActions } from '@patternfly/react-core';
 import { PlusCircleIcon } from '@patternfly/react-icons';

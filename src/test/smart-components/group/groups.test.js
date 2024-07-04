@@ -7,7 +7,7 @@ import { screen, render, fireEvent } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import promiseMiddleware from 'redux-promise-middleware';
 import Groups from '../../../smart-components/group/groups';
-import notificationsMiddleware from '@redhat-cloud-services/frontend-components-notifications/notificationsMiddleware';
+import notificationsMiddleware from '@ausuliv/frontend-components-notifications/notificationsMiddleware';
 import { groupsInitialState } from '../../../redux/reducers/group-reducer';
 import * as GroupActions from '../../../redux/actions/group-actions';
 import { FETCH_GROUPS, FETCH_ADMIN_GROUP, FETCH_SYSTEM_GROUP } from '../../../redux/action-types';

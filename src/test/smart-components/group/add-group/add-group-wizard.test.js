@@ -7,11 +7,11 @@ import configureStore from 'redux-mock-store';
 
 import { MemoryRouter } from 'react-router-dom';
 import promiseMiddleware from 'redux-promise-middleware';
-import { notificationsMiddleware } from '@redhat-cloud-services/frontend-components-notifications/';
+import { notificationsMiddleware } from '@ausuliv/frontend-components-notifications/';
 import AddGroupWizard, { onCancel } from '../../../../smart-components/group/add-group/add-group-wizard';
 import { defaultSettings } from '../../../../helpers/shared/pagination';
 
-jest.mock('@redhat-cloud-services/frontend-components/useChrome', () => {
+jest.mock('@ausuliv/frontend-components/useChrome', () => {
   return {
     __esModule: true,
     default: () => ({

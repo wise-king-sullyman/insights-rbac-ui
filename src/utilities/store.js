@@ -1,8 +1,8 @@
 import { createContext } from 'react';
 import promiseMiddleware from 'redux-promise-middleware';
-import notificationsMiddleware from '@redhat-cloud-services/frontend-components-notifications/notificationsMiddleware';
-import { notificationsReducer } from '@redhat-cloud-services/frontend-components-notifications/redux';
-import ReducerRegistry, { applyReducerHash } from '@redhat-cloud-services/frontend-components-utilities/ReducerRegistry';
+import notificationsMiddleware from '@ausuliv/frontend-components-notifications/notificationsMiddleware';
+import { notificationsReducer } from '@ausuliv/frontend-components-notifications/redux';
+import ReducerRegistry, { applyReducerHash } from '@ausuliv/frontend-components-utilities/ReducerRegistry';
 
 import reduxLogger from 'redux-logger';
 import thunk from 'redux-thunk';

@@ -168,7 +168,7 @@ export const schemaBuilder = (container, featureFlag) => {
                 component: 'plain-text',
                 name: 'cost-resources',
                 label: (
-                  <p className="pf-v5-u-mb-md">
+                  <p className="pf-v6-u-mb-md">
                     {intl.formatMessage(featureFlag ? messages.applyWorkspacesRolePermission : messages.applyInventoryGroupsRolePermission)}
                   </p>
                 ),
@@ -194,7 +194,7 @@ export const schemaBuilder = (container, featureFlag) => {
               {
                 component: 'plain-text',
                 name: 'text-description',
-                label: <p className="pf-v5-u-mb-md">{intl.formatMessage(messages.applyCostPermissionText)}</p>,
+                label: <p className="pf-v6-u-mb-md">{intl.formatMessage(messages.applyCostPermissionText)}</p>,
               },
               {
                 component: 'cost-resources',

@@ -1,5 +1,5 @@
 import React from 'react';
-import useChrome from '@redhat-cloud-services/frontend-components/useChrome';
+import useChrome from '@ausuliv/frontend-components/useChrome';
 
 const QuickstartsTest = () => {
   const chrome = useChrome();

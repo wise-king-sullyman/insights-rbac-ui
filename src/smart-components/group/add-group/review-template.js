@@ -7,8 +7,6 @@ import {
   Button,
   ButtonVariant,
   EmptyState,
-  EmptyStateHeader,
-  EmptyStateIcon,
   EmptyStateVariant,
   Progress,
   Spinner,
@@ -38,7 +36,7 @@ const ReviewTemplate = ({ formFields }) => {
   if (typeof error === 'undefined' || (submittingGroup && !submittingServiceAccounts)) {
     return (
       <Bullseye>
-        <Spinner className="pf-v5-u-mt-xl" size="xl" />
+        <Spinner className="pf-v6-u-mt-xl" size="xl" />
       </Bullseye>
     );
   }
@@ -46,14 +44,9 @@ const ReviewTemplate = ({ formFields }) => {
   if (submittingServiceAccounts && !error) {
     const value = submittingGroup ? 1 : submittingServiceAccounts ? 2 : 3;
     return (
-      <EmptyState variant={EmptyStateVariant.lg} data-component-ouia-id="wizard-progress" className="rbac-add-group-progress">
-        <EmptyStateHeader
-          titleText={intl.formatMessage(messages.groupBeingCreated)}
-          icon={<EmptyStateIcon className="pf-v5-u-mt-xl" icon={InProgressIcon} />}
-          headingLevel="h4"
-        />
+      <EmptyState  headingLevel="h4" icon={InProgressIcon}  titleText={intl.formatMessage(messages.groupBeingCreated)} variant={EmptyStateVariant.lg} data-component-ouia-id="wizard-progress" className="rbac-add-group-progress">
         <Progress
-          className="pf-v5-u-mt-lg"
+          className="pf-v6-u-mt-lg"
           style={{ textAlign: 'left' }}
           min={0}
           max={3}
@@ -88,7 +81,7 @@ const ReviewTemplate = ({ formFields }) => {
     />
   ) : (
     <React.Fragment>
-      <Title headingLevel="h1" size="xl" className="pf-v5-u-mb-lg">
+      <Title headingLevel="h1" size="xl" className="pf-v6-u-mb-lg">
         {intl.formatMessage(messages.reviewDetails)}
       </Title>
       {[[{ ...formFields?.[0]?.[0] }]]}

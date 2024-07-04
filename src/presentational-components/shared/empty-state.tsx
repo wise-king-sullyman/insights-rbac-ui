@@ -1,5 +1,5 @@
 import React from 'react';
-import { EmptyState, EmptyStateBody, EmptyStateIcon, EmptyStateVariant, EmptyStateHeader, EmptyStateFooter } from '@patternfly/react-core';
+import { EmptyState, EmptyStateBody, EmptyStateVariant, EmptyStateFooter } from '@patternfly/react-core';
 import { SearchIcon } from '@patternfly/react-icons';
 
 interface EmptyWithActionProps {
@@ -10,9 +10,8 @@ interface EmptyWithActionProps {
 }
 
 const EmptyWithAction = ({ title, icon, description, actions, ...props }: EmptyWithActionProps) => (
-  <EmptyState variant={EmptyStateVariant.sm} {...props}>
-    <EmptyStateHeader titleText={<>{title}</>} icon={<EmptyStateIcon icon={icon || SearchIcon} />} headingLevel="h4" />
-    <EmptyStateBody className="pf-v5-u-mb-md">
+  <EmptyState  headingLevel="h4" icon={icon || SearchIcon}  titleText={<>{title}</>} variant={EmptyStateVariant.sm} {...props}>
+    <EmptyStateBody className="pf-v6-u-mb-md">
       {description.map((text: React.ReactNode, key: number) => (
         <React.Fragment key={key}>
           {text} <br />

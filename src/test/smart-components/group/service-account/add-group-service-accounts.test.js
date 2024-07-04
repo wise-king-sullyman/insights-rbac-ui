@@ -4,14 +4,14 @@ import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 import { MemoryRouter } from 'react-router-dom';
 import promiseMiddleware from 'redux-promise-middleware';
-import { notificationsMiddleware } from '@redhat-cloud-services/frontend-components-notifications/';
+import { notificationsMiddleware } from '@ausuliv/frontend-components-notifications/';
 import { render, screen } from '@testing-library/react';
 import * as ServiceAccountsHelper from '../../../../helpers/service-account/service-account-helper';
 import AddGroupServiceAccounts from '../../../../smart-components/group/service-account/add-group-service-accounts';
 import { serviceAccountsInitialState } from '../../../../redux/reducers/service-account-reducer';
-import * as useChrome from '@redhat-cloud-services/frontend-components/useChrome';
+import * as useChrome from '@ausuliv/frontend-components/useChrome';
 
-jest.mock('@redhat-cloud-services/frontend-components/useChrome', () => {
+jest.mock('@ausuliv/frontend-components/useChrome', () => {
   return {
     __esModule: true,
     default: () => ({}),

@@ -4,7 +4,7 @@ import { Grid, GridItem, Stack, StackItem, Text, TextVariants } from '@patternfl
 import useFormApi from '@data-driven-forms/react-form-renderer/use-form-api';
 import { useIntl } from 'react-intl';
 import messages from '../../../Messages';
-import useChrome from '@redhat-cloud-services/frontend-components/useChrome';
+import useChrome from '@ausuliv/frontend-components/useChrome';
 import { useFlag } from '@unleash/proxy-client-react';
 
 const SummaryContent = () => {
@@ -55,7 +55,7 @@ const SummaryContent = () => {
                 </GridItem>
                 <GridItem md={9}>
                   {selectedRoles.map((role, index) => (
-                    <Text className="pf-v5-u-mb-0" key={index}>
+                    <Text className="pf-v6-u-mb-0" key={index}>
                       {role.label}
                     </Text>
                   ))}
@@ -69,7 +69,7 @@ const SummaryContent = () => {
                 </GridItem>
                 <GridItem md={9}>
                   {selectedUsers.map((role, index) => (
-                    <Text className="pf-v5-u-mb-0" key={index}>
+                    <Text className="pf-v6-u-mb-0" key={index}>
                       {role.label}
                     </Text>
                   ))}
@@ -84,7 +84,7 @@ const SummaryContent = () => {
                 {enableServiceAccounts && (
                   <GridItem md={9}>
                     {selectedServiceAccounts?.map((account, index) => (
-                      <Text className="pf-v5-u-mb-0" key={index}>
+                      <Text className="pf-v6-u-mb-0" key={index}>
                         {account.name}
                       </Text>
                     ))}
