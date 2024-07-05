@@ -1,7 +1,6 @@
 import React, { useEffect, useReducer } from 'react';
 import { shallowEqual, useSelector, useDispatch } from 'react-redux';
-import { Grid, GridItem, Text, TextVariants, FormGroup, Tooltip } from '@patternfly/react-core';
-import { Select, SelectOption, SelectVariant } from '@patternfly/react-core/deprecated';
+import { Grid, GridItem, Text, TextVariants, FormGroup, Tooltip, Select, SelectOption, SelectVariant } from '@patternfly/react-core';
 import useFieldApi from '@data-driven-forms/react-form-renderer/use-field-api';
 import useFormApi from '@data-driven-forms/react-form-renderer/use-form-api';
 import { fetchResourceDefinitions, fetchResource } from '../../../redux/actions/cost-management-actions';

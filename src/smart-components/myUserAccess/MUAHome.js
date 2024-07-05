@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { NavLink, useSearchParams } from 'react-router-dom';
-import { Dropdown, DropdownItem, DropdownToggle } from '@patternfly/react-core/deprecated';
-
+import { Dropdown, DropdownItem, MenuToggle } from '@patternfly/react-core';
 import { PageHeaderTitle } from '@ausuliv/frontend-components/PageHeader';
 import { useChrome } from '@ausuliv/frontend-components/useChrome';
 import { Text, Spinner } from '@patternfly/react-core';
@@ -56,9 +55,9 @@ const MyUserAccess = () => {
               <Dropdown
                 ouiaId="mua-bundle-dropdown"
                 toggle={
-                  <DropdownToggle onToggle={() => setDropdownOpen(!isDropdownOpen)} id="mua-bundle-dropdown">
+                  <MenuToggle onClick={() => setDropdownOpen(!isDropdownOpen)} id="mua-bundle-dropdown">
                     {bundleParam ? bundleParam : intl.formatMessage(messages.chooseSubscriptionEllipsis)}
-                  </DropdownToggle>
+                  </MenuToggle>
                 }
                 dropdownItems={bundleData.map((data) => (
                   <NavLink key={data.entitlement} to={{ pathname: '', search: `bundle=${data.entitlement}` }}>

@@ -1,17 +1,8 @@
 import React, { useState } from 'react';
 import { useIntl } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-	Alert,
-	Button,
-	Stack,
-	StackItem,
-	TextContent
-} from '@patternfly/react-core';
-import {
-	Modal,
-	ModalVariant
-} from '@patternfly/react-core/deprecated';
+import { Alert, Button, Stack, StackItem, TextContent } from '@patternfly/react-core';
+import { Modal, ModalVariant } from '@patternfly/react-core';
 import { useParams } from 'react-router-dom';
 import { ServiceAccount } from '../../../helpers/service-account/service-account-helper';
 import AppLink from '../../../presentational-components/shared/AppLink';

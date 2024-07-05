@@ -3,16 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
-import {
-	Button,
-	StackItem,
-	Stack,
-	TextContent
-} from '@patternfly/react-core';
-import {
-	Modal,
-	ModalVariant
-} from '@patternfly/react-core/deprecated';
+import { Button, StackItem, Stack, TextContent, Modal, ModalVariant } from '@patternfly/react-core';
 import { addNotification } from '@ausuliv/frontend-components-notifications/';
 import { useChrome } from '@ausuliv/frontend-components/useChrome';
 import { addMembersToGroup, fetchMembersForGroup, fetchGroups } from '../../../redux/actions/group-actions';

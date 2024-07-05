@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 import { Outlet, useNavigationType, useParams } from 'react-router-dom';
 import { shallowEqual, useSelector, useDispatch } from 'react-redux';
-import { Button, Level, LevelItem, Text, TextContent } from '@patternfly/react-core';
-import { Dropdown, DropdownItem, KebabToggle } from '@patternfly/react-core/deprecated';
+import { Button, Level, LevelItem, Text, TextContent, Dropdown, DropdownItem, MenuToggle, Icon } from '@patternfly/react-core';
+import { EllipsisVIcon } from '@patternfly/react-icons';
 import { PageHeaderTitle } from '@ausuliv/frontend-components/PageHeader';
 import { useChrome } from '@ausuliv/frontend-components/useChrome';
 import { fetchRole, fetchRolesWithPolicies } from '../../redux/actions/role-actions';
@@ -159,7 +159,19 @@ const Role = ({ onDelete }) => {
                 <LevelItem>
                   <Dropdown
                     ouiaId="role-title-actions-dropdown"
-                    toggle={<KebabToggle onToggle={(_event, isOpen) => setDropdownOpen(isOpen)} id="role-actions-dropdown" />}
+                    toggle={
+                      <MenuToggle
+                        onClick={(_event, isOpen) => setDropdownOpen(isOpen)}
+                        id="role-actions-dropdown"
+                        icon={
+                          <Icon>
+                            <EllipsisVIcon />
+                          </Icon>
+                        }
+                        variant="plain"
+                        isExpanded={isDropdownOpen}
+                      />
+                    }
                     isOpen={isDropdownOpen}
                     isPlain
                     position="right"

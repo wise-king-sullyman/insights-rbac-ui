@@ -3,9 +3,20 @@ import useChrome from '@ausuliv/frontend-components/useChrome';
 import { useLocation, useParams, Outlet, useNavigationType } from 'react-router-dom';
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import { FormattedMessage, useIntl } from 'react-intl';
-import { OutlinedQuestionCircleIcon } from '@patternfly/react-icons';
-import { Alert, AlertActionCloseButton, Popover, PopoverPosition, Split, SplitItem, Button } from '@patternfly/react-core';
-import { DropdownItem, Dropdown, KebabToggle } from '@patternfly/react-core/deprecated';
+import { OutlinedQuestionCircleIcon, EllipsisVIcon } from '@patternfly/react-icons';
+import {
+  Alert,
+  AlertActionCloseButton,
+  Popover,
+  PopoverPosition,
+  Split,
+  SplitItem,
+  Button,
+  DropdownItem,
+  Dropdown,
+  MenuToggle,
+  Icon,
+} from '@patternfly/react-core';
 import WarningModal from '@patternfly/react-component-groups/dist/dynamic/WarningModal';
 import SkeletonTable from '@patternfly/react-component-groups/dist/esm/SkeletonTable';
 import AppTabs from '../app-tabs/app-tabs';
@@ -211,7 +222,19 @@ const Group = () => {
                 {group.platform_default || group.admin_default ? null : (
                   <Dropdown
                     ouiaId="group-title-actions-dropdown"
-                    toggle={<KebabToggle onToggle={(_event, isOpen) => setDropdownOpen(isOpen)} id="group-actions-dropdown" />}
+                    toggle={
+                      <MenuToggle
+                        onClick={(_event, isOpen) => setDropdownOpen(isOpen)}
+                        id="group-actions-dropdown"
+                        icon={
+                          <Icon>
+                            <EllipsisVIcon />
+                          </Icon>
+                        }
+                        variant="plain"
+                        isExpanded={isDropdownOpen}
+                      />
+                    }
                     isOpen={isDropdownOpen}
                     isPlain
                     position="right"
