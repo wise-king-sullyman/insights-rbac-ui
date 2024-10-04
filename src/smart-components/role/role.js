@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 import { Outlet, useNavigationType, useParams } from 'react-router-dom';
 import { shallowEqual, useSelector, useDispatch } from 'react-redux';
-import { Button, Level, LevelItem, Text, TextContent, Dropdown, DropdownItem, MenuToggle, Icon } from '@patternfly/react-core';
+import { Button, Level, LevelItem, Content, Dropdown, DropdownItem, MenuToggle, Icon } from '@patternfly/react-core';
 import { EllipsisVIcon } from '@patternfly/react-icons';
 import { PageHeaderTitle } from '@ausuliv/frontend-components/PageHeader';
 import { useChrome } from '@ausuliv/frontend-components/useChrome';
@@ -181,9 +181,9 @@ const Role = ({ onDelete }) => {
               )}
             </Level>
             {description && (
-              <TextContent className="rbac-page-header__description">
-                <Text component="p">{description}</Text>
-              </TextContent>
+              <Content className="rbac-page-header__description">
+                <Content component="p">{description}</Content>
+              </Content>
             )}
           </TopToolbar>
           <Permissions cantAddPermissions={isNonPermissionAddingRole} isLoading={isLoading || !role} />

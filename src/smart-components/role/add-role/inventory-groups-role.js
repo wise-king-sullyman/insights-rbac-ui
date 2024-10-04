@@ -3,8 +3,8 @@ import {
 	Label, LabelGroup, Button,
 	Grid,
 	GridItem,
-	Text,
-	TextVariants,
+	Content,
+	ContentVariants,
 	FormGroup,
 	Tooltip,
 	Divider,
@@ -223,7 +223,7 @@ const InventoryGroupsRole = (props) => {
 
           <TextInputGroupUtilities>
             {state[permissionID].filterValue.length > 0 && (
-              <Button
+              <Button icon={<TimesIcon aria-hidden />}
                 variant="plain"
                 aria-label="Clear input value"
                 onClick={(e) => {
@@ -231,9 +231,7 @@ const InventoryGroupsRole = (props) => {
                   e.preventDefault();
                   onTextInputChange(e, '', permissionID);
                 }}
-              >
-                <TimesIcon aria-hidden />
-              </Button>
+               />
             )}
           </TextInputGroupUtilities>
         </TextInputGroup>
@@ -327,14 +325,14 @@ const InventoryGroupsRole = (props) => {
   return (
     <Grid hasGutter>
       <GridItem md={3} className="rbac-m-hide-on-sm">
-        <Text component={TextVariants.h4} className="rbac-bold-text pf-v6-u-mt-sm">
+        <Content component={ContentVariants.h4} className="rbac-bold-text pf-v6-u-mt-sm">
           {intl.formatMessage(messages.permissions)}
-        </Text>
+        </Content>
       </GridItem>
       <GridItem lg={9} md={6} className="rbac-m-hide-on-sm">
-        <Text component={TextVariants.h4} className="rbac-bold-text pf-v6-u-mt-sm">
+        <Content component={ContentVariants.h4} className="rbac-bold-text pf-v6-u-mt-sm">
           {intl.formatMessage(enableWorkspacesNameChange ? messages.workspacesDefinition : messages.groupDefinition)}
-        </Text>
+        </Content>
       </GridItem>
       {permissions.map(makeRow)}
     </Grid>

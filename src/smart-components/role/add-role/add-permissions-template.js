@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import {
-	Label, LabelGroup, Text,
-	TextContent,
+	Label, LabelGroup, Content,
 	Title,
 	Button,
 	Popover,
@@ -46,21 +45,21 @@ const AddPermissionTemplate = ({ formFields }) => {
       <Title headingLevel="h1" size="xl" className="rbac-c-add-permission-title">
         {intl.formatMessage(messages.addPermissions)}
       </Title>
-      <TextContent>
-        <Text>
+      <Content>
+        <Content component="p">
           {intl.formatMessage(messages.selectPermissionsForRole)}
           {unresolvedSplats.length !== 0 && (
             <Popover
               headerContent={intl.formatMessage(messages.onlyGranularPermissions)}
               bodyContent={intl.formatMessage(messages.noWildcardPermissions)}
             >
-              <Button variant="link">
-                {intl.formatMessage(messages.whyNotSeeingAllPermissions)} <QuestionCircleIcon />
+              <Button icon={<QuestionCircleIcon />} variant="link">
+                {intl.formatMessage(messages.whyNotSeeingAllPermissions)} 
               </Button>
             </Popover>
           )}
-        </Text>
-      </TextContent>
+        </Content>
+      </Content>
       {notAllowedBasePermissions?.length > 0 && !alertClosed ? (
         <Alert
           variant="custom"

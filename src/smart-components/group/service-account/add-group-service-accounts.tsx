@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { useIntl } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
-import { Alert, Button, Stack, StackItem, TextContent } from '@patternfly/react-core';
-import { Modal, ModalVariant } from '@patternfly/react-core';
+import { Alert, Button, Stack, StackItem, Content } from '@patternfly/react-core';
+import {
+	Modal,
+	ModalVariant
+} from '@patternfly/react-core/deprecated';
 import { useParams } from 'react-router-dom';
 import { ServiceAccount } from '../../../helpers/service-account/service-account-helper';
 import AppLink from '../../../presentational-components/shared/AppLink';
@@ -73,7 +76,7 @@ const AddGroupServiceAccounts: React.FunctionComponent<AddGroupServiceAccountsPr
     >
       <Stack hasGutter>
         <StackItem>
-          <TextContent>
+          <Content>
             {intl.formatMessage(messages.addServiceAccountsToGroupDescription)}
             <Alert
               className="pf-v6-u-mt-sm rbac-service-accounts-alert"
@@ -89,7 +92,7 @@ const AddGroupServiceAccounts: React.FunctionComponent<AddGroupServiceAccountsPr
                 ),
               })}
             />
-          </TextContent>
+          </Content>
         </StackItem>
         <StackItem className="rbac-add-service-account-modal">
           <ServiceAccountsList

@@ -2,7 +2,14 @@ import React, { useRef, useContext, useState, useEffect, Fragment } from 'react'
 import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 import { shallowEqual, useSelector, useDispatch } from 'react-redux';
-import { Button, Alert, Modal, ModalVariant } from '@patternfly/react-core';
+import {
+	Button,
+	Alert
+} from '@patternfly/react-core';
+import {
+	Modal,
+	ModalVariant
+} from '@patternfly/react-core/deprecated';
 import { useChrome } from '@ausuliv/frontend-components/useChrome';
 import { addNotification } from '@ausuliv/frontend-components-notifications/';
 import WarningModal from '@patternfly/react-component-groups/dist/dynamic/WarningModal';

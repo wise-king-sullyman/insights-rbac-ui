@@ -66,7 +66,7 @@ const Overview = () => {
           </FlexItem>
         </Flex>
       </PageHeader>
-      <PageSection>
+      <PageSection hasBodyWrapper={false}>
         <Card aria-label="Get started card" className="pf-u-mb-lg" data-ouia-component-id="get-started-card">
           <Grid hasGutter>
             <GridItem sm={12} md={6} lg={8}>

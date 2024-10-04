@@ -3,7 +3,7 @@ import { NavLink, useSearchParams } from 'react-router-dom';
 import { Dropdown, DropdownItem, MenuToggle } from '@patternfly/react-core';
 import { PageHeaderTitle } from '@ausuliv/frontend-components/PageHeader';
 import { useChrome } from '@ausuliv/frontend-components/useChrome';
-import { Text, Spinner } from '@patternfly/react-core';
+import { Content, Spinner } from '@patternfly/react-core';
 import StatusLabel from '../../presentational-components/myUserAccess/StatusLabel';
 import PermissionsContext from '../../utilities/permissions-context';
 import { bundleData } from '../../presentational-components/myUserAccess/bundles';
@@ -47,9 +47,9 @@ const MyUserAccess = () => {
               </React.Fragment>
             }
           />
-          <Text component="p" className="rbac-p-myUserAccess--subtitle">
+          <Content component="p" className="rbac-p-myUserAccess--subtitle">
             {intl.formatMessage(messages.selectAppsToViewPermissions)}
-          </Text>
+          </Content>
           {entitledBundles && (
             <div className="rbac-p-myUserAccess--dropdown sticky">
               <Dropdown

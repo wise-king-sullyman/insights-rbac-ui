@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
-import { Text, TextVariants } from '@patternfly/react-core';
+import { Content, ContentVariants } from '@patternfly/react-core';
 import { ExternalLinkAltIcon } from '@patternfly/react-icons';
 import PermissionsContext from '../../utilities/permissions-context';
 import messages from '../../Messages';
@@ -14,24 +14,24 @@ const ActiveUser = ({ linkDescription, linkTitle }) => {
   const prefix = chrome.isProd() ? '' : `${env}.`;
   const { orgAdmin } = useContext(PermissionsContext);
   return orgAdmin ? (
-    <Text className="pf-v6-u-mt-0" component={TextVariants.h7}>
+    <Content className="pf-v6-u-mt-0" component={ContentVariants.h7}>
       {`${intl.formatMessage(messages.usersDescription)} `}
       {linkDescription}
-      <Text
-        component={TextVariants.a}
+      <Content
+        component={ContentVariants.a}
         href={`https://www.${prefix}redhat.com/wapps/ugc/protected/usermgt/userList.html`}
         target="_blank"
         rel="noopener noreferrer"
       >
         {linkTitle}
         <ExternalLinkAltIcon />
-      </Text>
+      </Content>
       .
-    </Text>
+    </Content>
   ) : (
-    <Text className="pf-v6-u-mt-0" component={TextVariants.h7}>
+    <Content className="pf-v6-u-mt-0" component={ContentVariants.h7}>
       {`${intl.formatMessage(messages.usersDescription)} `}
-    </Text>
+    </Content>
   );
 };
 

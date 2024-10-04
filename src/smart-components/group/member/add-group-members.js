@@ -3,7 +3,16 @@ import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
-import { Button, StackItem, Stack, TextContent, Modal, ModalVariant } from '@patternfly/react-core';
+import {
+	Button,
+	StackItem,
+	Stack,
+	Content
+} from '@patternfly/react-core';
+import {
+	Modal,
+	ModalVariant
+} from '@patternfly/react-core/deprecated';
 import { addNotification } from '@ausuliv/frontend-components-notifications/';
 import { useChrome } from '@ausuliv/frontend-components/useChrome';
 import { addMembersToGroup, fetchMembersForGroup, fetchGroups } from '../../../redux/actions/group-actions';
@@ -70,9 +79,9 @@ const AddGroupMembers = ({ cancelRoute }) => {
     >
       <Stack hasGutter>
         <StackItem>
-          <TextContent>
+          <Content>
             <ActiveUser linkDescription={intl.formatMessage(messages.toManageUsersText)} />
-          </TextContent>
+          </Content>
         </StackItem>
         <StackItem>
           <UsersList selectedUsers={selectedUsers} setSelectedUsers={setSelectedUsers} displayNarrow />

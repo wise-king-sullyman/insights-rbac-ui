@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { Text, TextContent, TextVariants, Flex, FlexItem } from '@patternfly/react-core';
+import { Content, ContentVariants, Flex, FlexItem } from '@patternfly/react-core';
 import { ToolbarTitlePlaceholder } from './loader-placeholders';
 import RbacBreadcrumbs from './breadcrumbs';
 import { PageHeader, PageHeaderTitle } from '@ausuliv/frontend-components/PageHeader';
@@ -37,9 +37,9 @@ export const TopToolbarTitle = ({ title, renderTitleTag, description, children }
       <FlexItem alignSelf={{ modifier: 'alignSelfCenter' }}>{renderTitleTag && renderTitleTag()}</FlexItem>
     </Flex>
     {description && (
-      <TextContent className="rbac-page-header__description">
-        {typeof description === 'string' ? <Text component={TextVariants.p}>{description}</Text> : description}
-      </TextContent>
+      <Content className="rbac-page-header__description">
+        {typeof description === 'string' ? <Content component={ContentVariants.p}>{description}</Content> : description}
+      </Content>
     )}
     {children}
   </Fragment>
